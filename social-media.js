@@ -4,7 +4,7 @@ var attachedParent = '.socialMedia';
 var subject = encodeURI('Lorem Ipsum');
 var message = encodeURI('dolor sit amet, consectetur adipiscing elit. Integer tempor vehicula tristique');
 
-SocialMedia.set={
+SSocialMedia.set={
 
     FacebookLink:function(){
         return 'http://www.facebook.com/sharer.php?u=';
@@ -29,18 +29,6 @@ SocialMedia.set={
     },
     MailIconSquareBootstrap:function(){
         return '<i class="fa fa-envelope-square"></i>';
-    },
-    ParentIconWrapper:function(cls,txt,arg){
-        return $('<div/>', {
-            class: cls,
-            text: txt,
-        }).appendTo(arg);
-    },
-    ParentWrapper:function(cls,txt,arg){
-        return $('<div/>', {
-            class: cls,
-            text: txt,
-        }).appendTo(arg);
     },
     ATag:function(cls,txt, hrf,arg){
 
@@ -79,12 +67,6 @@ SocialMedia.get={
     },
     IconMail:function(){
         return SocialMedia.set.MailIconSquareBootstrap();
-    },
-    ParentIconWrapper:function(cls,txt,arg){
-        return SocialMedia.set.ParentIconWrapper(cls,txt,arg);
-    },
-    ParentWrapper:function(cls,txt,arg){
-        return SocialMedia.set.ParentWrapper(cls,txt,arg);
     },
     ATag:function(cls,txt, hrf,arg){
         return SocialMedia.set.ATag(cls,txt, hrf,arg);
