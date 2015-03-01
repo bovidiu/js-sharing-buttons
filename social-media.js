@@ -4,7 +4,7 @@ var attachedParent = '.socialMedia';
 var subject = encodeURI('Lorem Ipsum');
 var message = encodeURI('dolor sit amet, consectetur adipiscing elit. Integer tempor vehicula tristique');
 
-SSocialMedia.set={
+SocialMedia.set={
 
     FacebookLink:function(){
         return 'http://www.facebook.com/sharer.php?u=';
