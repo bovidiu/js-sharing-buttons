@@ -1,3 +1,7 @@
+/*
+Thank you!
+https://github.com/bovidiu/js-sharing-bootstrap/
+*/
 var SocialMedia = SocialMedia || {};
 var pageURL='';
 var attachedParent = '.socialMedia';
