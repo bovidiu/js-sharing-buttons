@@ -1,3 +1,5 @@
+https://travis-ci.org/bovidiu/js-sharing-bootstrap.svg
+
 # js-sharing-bootstrap
 Inject Social Media FontAwesome Icons and makes button shareable. The links will share current page.
 
