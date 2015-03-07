@@ -2,6 +2,7 @@
 Thank you!
 https://github.com/bovidiu/js-sharing-bootstrap/
 */
+(function(){
 var SocialMedia = SocialMedia || {};
 var pageURL='';
 var attachedParent = '.socialMedia';
@@ -112,3 +113,4 @@ SocialMedia.run={
 }
 
 SocialMedia.run.init();
+})()
