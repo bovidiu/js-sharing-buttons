@@ -6,11 +6,14 @@ To inject the icons into your web page, add this file in the footer/header of yo
 
 ## Set where the icons will be inserted!
 Change the below variable with the CLASS/ID of your HTML tag where you want the icons to be inserted.
+
 var attachedParent = '.socialMedia';
 
 ##Email configuration 
 The below variables needs to be modify if you would like to share the content over email
+
 var subject = encodeURI('Lorem Ipsum');
+
 var message = encodeURI('dolor sit amet, consectetur adipiscing elit. Integer tempor vehicula tristique');
 
 
