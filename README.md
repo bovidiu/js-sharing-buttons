@@ -1,5 +1,10 @@
 # js-sharing-bootstrap
 Inject Social Media FontAwesome Icons and makes button shareable. The links will share current page.
+There are a few files that needs to be considered.
+
+- social-media.js uses jQuery tag
+- social-media.min.js is a duplicate of social-media.js but minified.
+- social-media-js.js uses pure JavaScript
 
 # Configure
 To inject the icons into your web page, add this file in the footer/header of your page and change the following:
