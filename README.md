@@ -28,5 +28,8 @@ var message = encodeURI('dolor sit amet, consectetur adipiscing elit. Integer te
 
 
 ##Add/remove icons
-In case you don't need all the icons, you can comment out or remove them from SocialMedia.run -> init:
+In case you don't need all the icons, you can comment out or remove them from 
+
+SocialMedia.run -> init:
+
 DO NOT REMOVE SocialMedia.run.makePageURL();
