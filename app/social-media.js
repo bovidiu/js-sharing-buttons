@@ -42,8 +42,6 @@
     },
     build: function (cls) {
       return '<i class="' + cls + '"></i>';
-      /*var iconList = SocialMedia.icons.list();
-       return '<i class="' + iconList.tpe.cls + '"></i>';*/
     }
   };
 
