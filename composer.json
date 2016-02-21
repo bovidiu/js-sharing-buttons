@@ -1,0 +1,7 @@
+{
+  "name": "bovidiu/js-sharing-bootstrap",
+  "description": "Social media sharing pages, in a simple lib",
+  "require": {
+    "bovidiu/js-sharing-bootstrap": "1.0.*"
+  }
+}
