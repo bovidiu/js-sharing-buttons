@@ -1,22 +1,25 @@
-#Social Media Sharing
-Inject Social Media FontAwesome Icons and makes button shareable.
+#Social Media Sharing Buttons
+Social media buttons to share your page to social media; already configured to use font-awesome icons.
 
-#Configure
+The current library of social media list includes:
+* Facebook
+* Twitter
+* LinkedIn
+* Pinterest
 
-To inject the icons into your web page, add this file in the footer/header of your page and change the following:
-Set where the icons will be inserted!
+#Next update
+In the next version I will add options to customise the icons displayable.
+ie: as a user i will only want to display facebook and twitter in the footer of the page, however in the header I would like to have all icons.
 
-If you are using the jquery version (social-media.js) then follow the below setup:
 
-Change the below variable with the CLASS/ID of your HTML tag where you want the icons to be inserted.
+#How to use
+Add the library into your page footer and make sure that on the pages exists an element with a class named: `socialMedia` .
 
-var attachedParent = '.socialMedia';
+#Log
 
-If you are using the JavaScript setup (social-media-js.js) then make sure that attachedParent refers to an ID.
-Email configuration
+##v1.1
+It's a remake of Master branch and v1.0 where it was configured with 2 libraries one of which was a jQuery approach.
 
-The below variables needs to be modify if you would like to share the content over email
+This new version is build only into JavaScript and the library has 1.5kb compressed. Also I have added a composer.json to be easier to install.
+ 
 
-var subject = encodeURI('Lorem Ipsum');
-
-var message = encodeURI('dolor sit amet, consectetur adipiscing elit. Integer tempor vehicula tristique');

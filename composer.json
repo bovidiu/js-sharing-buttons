@@ -1,7 +1,20 @@
 {
   "name": "bovidiu/js-sharing-bootstrap",
-  "description": "Social media sharing pages, in a simple lib",
+  "version": "1.1",
+  "license": "MIT",
+  "authors": [
+    {
+      "name" : "Ovidiu S Bokar",
+      "email": "ovidiu.bokar@gmail.com",
+      "homepage": "http://www.ovidiubokar.com",
+      "role": "Developer & Owner"
+    }
+  ],
+  "suggest": {
+    "email" : "ovidiu.bokar@gmail.com"
+  },
+  "description": "Social media sharing pages, in a simple library",
   "require": {
-    "bovidiu/js-sharing-bootstrap": "1.0.*"
+    "bovidiu/js-sharing-bootstrap": "1.1"
   }
 }
