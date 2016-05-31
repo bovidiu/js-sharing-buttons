@@ -1,3 +1,5 @@
+[![bitHound Code](https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/badges/code.svg)](https://www.bithound.io/github/bovidiu/js-sharing-bootstrap)
+
 #Social Media Sharing Buttons
 Social media buttons to share your page to social media; already configured to use font-awesome icons.
 
