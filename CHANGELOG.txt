@@ -1,0 +1,12 @@
+#Log
+
+##v1.2
+
+Remove duplicated class name
+
+##v1.1
+It's a remake of Master branch and v1.0 where it was configured with 2 libraries one of which was a jQuery approach.
+
+This new version is build only into JavaScript and the library has 1.5kb compressed. Also I have added a composer.json to be easier to install.
+
+
