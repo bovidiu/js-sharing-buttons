@@ -18,9 +18,6 @@
   "scripts": {
    "test": "karma start --single-run --browsers PhantomJS"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bovidiu/js-sharing-buttons.git"
