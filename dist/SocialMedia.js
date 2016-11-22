@@ -30,6 +30,5 @@ var SocialMedia = (function () {
     };
     return SocialMedia;
 }());
-
 var cm = new SocialMedia();
 console.log(cm.getConfig());
