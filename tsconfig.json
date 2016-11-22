@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "module": "system",
-    "noImplicitAny": true,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "inlineSources": true,
-    "outFile": "dist/social-media.js",
-    "sourceMap": true
+    "noImplicitAny": false
   },
   "include": [
     "ts/**/*.ts"
