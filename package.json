@@ -29,7 +29,8 @@
   },
   "scripts": {
     "pretest": "tsc test/*Test.ts --module commonjs",
-    "test": "mocha"
+    "test": "mocha",
+    "watch": "mocha --watch"
   },
   "repository": {
     "type": "git",

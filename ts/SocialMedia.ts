@@ -19,7 +19,7 @@ export class SocialMedia implements SocialMediaInterface {
         },
         twitter : {
           name: 'twitter',
-          active : false,
+          active : true,
           url : 'http://twitter.com/share?url='
         },
         pinterest : {
