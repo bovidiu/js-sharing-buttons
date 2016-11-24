@@ -23,7 +23,7 @@
     "typedoc": "^0.5.1"
   },
   "scripts": {
-    "install": "./node_modules/http-server/bin/http-server test/browser/ -a 127.0.0.1",
+    "install": "./node_modules/http-server/bin/http-server test/browser/ -a 127.0.0.1 &>/dev/null &",
     "test": "./run-test.sh"
   },
   "repository": {
