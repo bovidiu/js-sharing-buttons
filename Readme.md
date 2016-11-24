@@ -10,6 +10,16 @@ The current library of social media list includes:
 * LinkedIn
 * Pinterest
 
+#Install
+You can use composer to install it `composer require bovidiu/js-sharing-bootstrap` 
+
+Or implement it manually by adding the script in the footer like:
+
+```$xslt                                    
+<script src="/path/to/js/SocialMedia.min.js"></script>
+```
+
+
 #Configure
 By default it will look for `socialMedia` class and will try to render Facebook and Twitter icons
 
