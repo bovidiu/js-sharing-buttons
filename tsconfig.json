@@ -8,13 +8,14 @@
     "experimentalDecorators": true,
     "removeComments": true,
     "noImplicitAny": false,
-    "outDir": "./dist"
+    "outDir": "./lib"
   },
   "include": [
     "ts/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "ts/SocialMediaInterface.ts"
   ]
 }
