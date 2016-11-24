@@ -1,95 +1,83 @@
 import { SocialMediaInterface } from './SocialMediaInterface';
-interface HTMLElement {
-  dataset: DOMStringMap;
-  hidden: boolean;
-  msGetInputContext(): MSInputMethodContext;
-}
 class SocialMedia implements SocialMediaInterface {
-  fb_url: string;
-  tw_url: string;
-  ln_url: string;
-  pi_url: string;
   config: any;
   userConfig: any;
 
-  constructor(user=null) {
-    this.fb_url = "http://www.facebook.com/sharer.php?u=";
-    this.tw_url = "http://twitter.com/share?url=";
-    this.ln_url = "http://www.linkedin.com/shareArticle?mini=true&url=";
-    this.pi_url = "http://pinterest.com/pin/create/button/?url=";
-    this.configureDefault();
+  /**
+   * Class constructor
+   * Builds default configurations and sets any custom configuration if the parameter is pass
+   * @param user
+   */
+  constructor(user = null) {
+    this.config = {
+      pageURL : window.location.href,
+      defaultTarget : 'socialMedia',
+      icon : {
+        facebook : {
+          name: 'facebook',
+          active : true,
+          url : 'http://www.facebook.com/sharer.php?u='
+        },
+        twitter : {
+          name: 'twitter',
+          active : false,
+          url : 'http://twitter.com/share?url='
+        },
+        pinterest : {
+          name: 'pinterest',
+          active : false,
+          url : 'http://www.linkedin.com/shareArticle?mini=true&url='
+        },
+        linkedin : {
+          name: 'linkedin',
+          active : false,
+          url : 'http://pinterest.com/pin/create/button/?url='
+        },
+      }
+    };
     this.userSetup(user);
   }
 
   /**
-   * get Facebook URL
-   * @returns {string}
-   */
-  getFacebookURL(): string {
-    return this.fb_url;
-  }
-
-  /**
-   * get Twitter URL
-   * @returns {string}
-   */
-  getTwitterURL(): string {
-    return this.tw_url;
-  }
-
-  /**
-   * get LinkedIn URL
-   * @returns {string}
-   */
-  getLinkedInURL(): string {
-    return this.ln_url;
-  }
-
-  /**
-   * get Pinterest URL
-   * @returns {string}
-   */
-  getPinterestURL(): string {
-    return this.pi_url;
-  }
-
-  /**
-   * get Config
+   * Merge default config with user config and return only one object config
    * @returns {any}
    */
   getConfig(): any {
     let defaultConfig = this.config;
-    let user = this.userConfig;
-    for(let uc in user){
-       if(defaultConfig[uc].length){
-         defaultConfig[uc] = user[uc];
-       }
-    }
-    return defaultConfig;
-  }
-  getConfigElement(elem): any{
-    let currentConfig = this.getConfig();
-
-    if(currentConfig.hasOwnProperty(elem)){
-      return currentConfig[elem];
-    }
-    console.log('Property: ' + elem + ' can not be found');
-
+    let user          = this.userConfig;
+    let allConfig     = this.mergeRecursive(defaultConfig, user);
+    return allConfig;
   }
 
   /**
-   * Set default config in {}
-   * @returns {{pageURL: string, defaultTarget: string}}
+   * Recursivly merge two pbjects into one
+   * @param obj1
+   * @param obj2
+   * @returns {any}
    */
-  configureDefault(): any {
-    return this.config = {
-      pageURL: window.location.href,
-      defaultTarget: 'socialMedia',
-      fb_url: true,
-      tw_url: true,
-      pi_url: false,
-      ln_url: false,
-    };
+  mergeRecursive(obj1, obj2): any {
+    for (var p in obj2) {
+      try {
+        if (obj2[p].constructor == Object) {
+          obj1[p] = this.mergeRecursive(obj1[p], obj2[p]);
+        } else {
+          obj1[p] = obj2[p];
+        }
+      } catch (e) {
+        obj1[p] = obj2[p];
+      }
+    }
+    return obj1;
+  }
+
+  /**
+   * Get configuration per section
+   * @param elem
+   * @returns {any}
+   */
+  getConfigElement(elem): any {
+    let currentConfig = this.getConfig();
+    return currentConfig[elem];
   }
 
   /**
@@ -97,42 +85,65 @@ class SocialMedia implements SocialMediaInterface {
    * @param user
    * @returns {any}
    */
-  userSetup(user): any{
+  userSetup(user): any {
     return this.userConfig = user;
   }
 
-  getListTagsOnPage(): any {
-    let currentTag = this.getConfigElement('defaultTarget');
+  /**
+   * Initialise creation of links
+   */
+  init(): any {
+    let currentTag    = this.getConfigElement('defaultTarget');
     if (currentTag !== 'undefined') {
       let availableTags = document.querySelectorAll('.' + currentTag);
-      console.log(availableTags.length);
       if (availableTags.length) {
         for (let i = 0; i < availableTags.length; i++) {
-          this.createAnchor(currentTag);
+          this.createIcons(currentTag,i)
         }
-        /*for(let at in availableTags){
-         let elemConfig =availableTags[at];
-         if(elemConfig){
-         console.log(availableTags[at]);
-         }else{
-         console.log('no set')
-         }
-         }*/
       }
     }
   }
-  createAnchor(target){
-    let availableTags = document.querySelectorAll('.' + target);
-   let elem = document.createElement('a');
-    elem.className = 'social-icon';
-    elem.innerText = 'Social Media Buttons';
-    elem.href = '//google.com';
-    availableTags[0].appendChild(elem);
+
+  /**
+   * get a list of active icons and build the anchor
+   * @param currentTag
+   * @param i
+   */
+  createIcons(currentTag, i): any{
+    let activeIcons = this.getActiveIcons();
+    for(let icon in activeIcons){
+      this.createAnchor(currentTag, i,activeIcons[icon].name,activeIcons[icon].url);
+    }
   }
 
+  /**
+   *  Filter the configuration to get only the active icons
+   * @returns {Array}
+   */
+  getActiveIcons(): any {
+    let availabeTypes = this.getConfig();
+    let results       = [];
+    for (let i in availabeTypes.icon) {
+      if (availabeTypes.icon[i].active) {
+        results.push(availabeTypes.icon[i]);
+      }
+    }
+    return results;
+  }
+
+  /**
+   * Create an anchor element by passing the target element, index of target element
+   * element name (which becomes the class) and element url
+   * @param target
+   * @param i
+   * @param cls
+   * @param url
+   */
+  createAnchor(target, i, cls, url): any {
+    let availableTags = document.querySelectorAll('.' + target);
+    let elem          = document.createElement('a');
+    elem.className    = 'social-icon icon-'+cls;
+    elem.href         = url + this.config.pageURL;
+    availableTags[i].appendChild(elem);
+  }
 }
-
-
-let cm = new SocialMedia();
-
-console.log(cm.getListTagsOnPage()) ;

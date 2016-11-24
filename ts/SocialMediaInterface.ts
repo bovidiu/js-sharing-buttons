@@ -1,15 +1,52 @@
 export interface SocialMediaInterface{
-  fb_url : string;
-  tw_url: string;
-  ln_url: string;
-  pi_url: string;
+  /**
+   * Store user configurations
+   */
   userConfig: any;
-  getFacebookURL(): string;
-  getTwitterURL(): string;
-  getLinkedInURL(): string;
-  getPinterestURL(): string;
+  /**
+   * Store default configuration
+   */
+  config: any;
+  /**
+   * Get all configuration as one single object
+   */
   getConfig(): any;
-  configureDefault(): any;
+  /**
+   * Set the user config globally
+   * @param user
+   */
   userSetup(user): any;
-
+  /**
+   * Merge default config with user config
+   * @param obj1
+   * @param obj2
+   */
+  mergeRecursive(obj1, obj2): any;
+  /**
+   * Get configuration per element
+   * @param elem
+   */
+  getConfigElement(elem): any;
+  /**
+   * Initialise the icons
+   */
+  init(): any;
+  /**
+   * Build icons
+   * @param currentTag
+   * @param i
+   */
+  createIcons(currentTag, i): any;
+  /**
+   * Get active icons
+   */
+  getActiveIcons(): any;
+  /**
+   * Create anchors
+   * @param target
+   * @param i
+   * @param cls
+   * @param url
+   */
+  createAnchor(target, i, cls, url): any;
 }
