@@ -6,6 +6,7 @@ var SocialMedia = (function () {
         this.ln_url = "http://www.linkedin.com/shareArticle?mini=true&url=";
         this.pi_url = "http://pinterest.com/pin/create/button/?url=";
         this.configureDefault();
+        console.log(this);
     }
     SocialMedia.prototype.getFacebookURL = function () {
         return this.fb_url;
@@ -30,5 +31,5 @@ var SocialMedia = (function () {
     };
     return SocialMedia;
 }());
-var cm = new SocialMedia();
+var cm = new SocialMedia({ abc: 'test' });
 console.log(cm.getConfig());
