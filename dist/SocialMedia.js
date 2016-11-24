@@ -3,7 +3,6 @@ var SocialMedia = (function () {
     function SocialMedia(user) {
         if (user === void 0) { user = null; }
         this.config = {
-            pageURL: window.location.href,
             defaultTarget: 'socialMedia',
             icon: {
                 facebook: {
@@ -90,8 +89,9 @@ var SocialMedia = (function () {
         var availableTags = document.querySelectorAll('.' + target);
         var elem = document.createElement('a');
         elem.className = 'social-icon icon-' + cls;
-        elem.href = url + this.config.pageURL;
+        elem.href = url + window.location.href;
         availableTags[i].appendChild(elem);
     };
     return SocialMedia;
 }());
+window.SocialMedia = SocialMedia;

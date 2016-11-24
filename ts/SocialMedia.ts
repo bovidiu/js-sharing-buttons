@@ -1,5 +1,5 @@
 import { SocialMediaInterface } from './SocialMediaInterface';
-class SocialMedia implements SocialMediaInterface {
+export class SocialMedia implements SocialMediaInterface {
   config: any;
   userConfig: any;
 
@@ -10,7 +10,6 @@ class SocialMedia implements SocialMediaInterface {
    */
   constructor(user = null) {
     this.config = {
-      pageURL : window.location.href,
       defaultTarget : 'socialMedia',
       icon : {
         facebook : {
@@ -143,7 +142,7 @@ class SocialMedia implements SocialMediaInterface {
     let availableTags = document.querySelectorAll('.' + target);
     let elem          = document.createElement('a');
     elem.className    = 'social-icon icon-'+cls;
-    elem.href         = url + this.config.pageURL;
+    elem.href         = url + window.location.href;
     availableTags[i].appendChild(elem);
   }
 }
