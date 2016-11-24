@@ -13,8 +13,5 @@
   "suggest": {
     "email" : "ovidiu.bokar@gmail.com"
   },
-  "description": "Social media sharing buttons, in a simple library",
-  "require": {
-    "bovidiu/js-sharing-bootstrap": "1.1"
-  }
+  "description": "Social media sharing buttons, in a simple library"
 }
