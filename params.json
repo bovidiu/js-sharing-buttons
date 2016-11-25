@@ -1,6 +1,6 @@
 {
   "name": "JavaScript Sharing Buttons",
-  "tagline": "Social Media buttons to share page",
+  "tagline": "Social Media buttons for page share",
   "body": "[![bitHound Dependencies](https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/badges/dependencies.svg)](https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/v1.1/dependencies/npm)\r\n[![bitHound Overall Score](https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/badges/score.svg)](https://www.bithound.io/github/bovidiu/js-sharing-bootstrap)\r\n\r\n#Social Media Sharing Buttons\r\nSocial media buttons to share your page to social media; already configured to use font-awesome icons.\r\n\r\nThe current library of social media list includes:\r\n* Facebook\r\n* Twitter\r\n* LinkedIn\r\n* Pinterest\r\n\r\n#Next update\r\nIn the next version I will add options to customise the icons displayable.\r\nie: as a user i will only want to display facebook and twitter in the footer of the page, however in the header I would like to have all icons.\r\n\r\n\r\n#How to use\r\nAdd the library into your page footer and make sure that on the pages exists an element with a class named: `socialMedia` .\r\n\r\n#Log\r\n\r\n##v1.1\r\nIt's a remake of Master branch and v1.0 where it was configured with 2 libraries one of which was a jQuery approach.\r\n\r\nThis new version is build only into JavaScript and the library has 1.5kb compressed. Also I have added a composer.json to be easier to install.\r\n \r\n\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
