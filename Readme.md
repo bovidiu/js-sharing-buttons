@@ -20,6 +20,10 @@ or use the CDN
 ```$xslt
 <script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js"></script>
 ```
+SRI CDN
+```$xslt
+<script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js" integrity="sha256-aq2Jk+ughOTxmvjt+RG7mStscd7Cpr/ifg2rkkc6z7E=" crossorigin="anonymous"></script>
+```
 
 #Configure
 
