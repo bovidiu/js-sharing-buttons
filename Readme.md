@@ -11,14 +11,40 @@ The current library of social media list includes:
 #Install
 You can use composer to install it `composer require bovidiu/js-sharing-bootstrap` 
 
-Or implement it manually by adding the script in the footer like:
+Or implement it manually by adding the script in the footer of the pagelike:
 
 ```$xslt                                    
 <script src="/path/to/js/SocialMedia.min.js"></script>
 ```
-
+or use the CDN
+```$xslt
+<script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js"></script>
+```
 
 #Configure
-By default it will look for `socialMedia` class and will try to render Facebook and Twitter icons
+
+## Script
+After adding the above script, right after add:
+```$xslt
+<script>
+SocialMedia.init();
+</script>
+```
+It shoould look like similar to this:
+
+```$xslt
+<script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js"></script>
+<script>
+SocialMedia.init();
+</script>
+```
+
+## HTML
+Add any where in the page a div or any HTML element with a class called `socialMedia`, ie:
+
+```
+<div class="socialMedia"></div>
+```
+
 
 
