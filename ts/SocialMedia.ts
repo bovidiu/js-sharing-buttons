@@ -25,12 +25,12 @@ export class SocialMedia implements SocialMediaInterface {
         pinterest : {
           name: 'pinterest',
           active : false,
-          url : 'http://www.linkedin.com/shareArticle?mini=true&url='
+          url : 'http://pinterest.com/pin/create/button/?url='
         },
         linkedin : {
           name: 'linkedin',
           active : false,
-          url : 'http://pinterest.com/pin/create/button/?url='
+          url : 'http://www.linkedin.com/shareArticle?mini=true&url='
         },
       }
     };
