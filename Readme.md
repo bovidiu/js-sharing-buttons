@@ -9,7 +9,7 @@ The current library of social media list includes:
 * Pinterest
 
 #Install
-You can use composer to install it `composer require bovidiu/js-sharing-bootstrap` 
+You can use composer to install it `composer require bovidiu/js-sharing-bootstrap` or npm `npm i js-sharing-buttons` 
 
 Or implement it manually by adding the script in the footer of the pagelike:
 
