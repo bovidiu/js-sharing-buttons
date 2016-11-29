@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>JavaScript Sharing Buttons by bovidiu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>JavaScript Sharing Buttons by bovidiu</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>JavaScript Sharing Buttons</h1>
-        <h2>Social Media buttons for page share</h2>
-        <a href="https://github.com/bovidiu/js-sharing-buttons" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <section class="page-header">
+      <h1 class="project-name">JavaScript Sharing Buttons</h1>
+      <h2 class="project-tagline">Social Media buttons for page share</h2>
+      <a href="https://github.com/bovidiu/js-sharing-buttons" class="btn">View on GitHub</a>
+      <a href="https://github.com/bovidiu/js-sharing-buttons/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/bovidiu/js-sharing-buttons/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <p><a href="https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/v1.1/dependencies/npm"><img src="https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/badges/dependencies.svg" alt="bitHound Dependencies"></a>
-<a href="https://www.bithound.io/github/bovidiu/js-sharing-bootstrap"><img src="https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/badges/score.svg" alt="bitHound Overall Score"></a></p>
+    <section class="main-content">
+      <p><a href="https://travis-ci.org/bovidiu/js-sharing-buttons"><img src="https://travis-ci.org/bovidiu/js-sharing-buttons.svg?branch=v1.4-dev" alt="Build Status"></a></p>
 
 <h1>
 <a id="social-media-sharing-buttons" class="anchor" href="#social-media-sharing-buttons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Social Media Sharing Buttons</h1>
@@ -46,43 +36,61 @@
 </ul>
 
 <h1>
-<a id="next-update" class="anchor" href="#next-update" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Next update</h1>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h1>
 
-<p>In the next version I will add options to customise the icons displayable.
-ie: as a user i will only want to display facebook and twitter in the footer of the page, however in the header I would like to have all icons.</p>
+<p>You can use composer to install it <code>composer require bovidiu/js-sharing-bootstrap</code> or npm <code>npm i js-sharing-buttons</code> </p>
+
+<p>Or implement it manually by adding the script in the footer of the pagelike:</p>
+
+<pre lang="$xslt"><code>&lt;script src="/path/to/js/SocialMedia.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>or use the CDN</p>
+
+<pre lang="$xslt"><code>&lt;script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>SRI CDN</p>
+
+<pre lang="$xslt"><code>&lt;script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js" integrity="sha256-aq2Jk+ughOTxmvjt+RG7mStscd7Cpr/ifg2rkkc6z7E=" crossorigin="anonymous"&gt;&lt;/script&gt;
+</code></pre>
 
 <h1>
-<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h1>
-
-<p>Add the library into your page footer and make sure that on the pages exists an element with a class named: <code>socialMedia</code> .</p>
-
-<h1>
-<a id="log" class="anchor" href="#log" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Log</h1>
+<a id="configure" class="anchor" href="#configure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configure</h1>
 
 <h2>
-<a id="v11" class="anchor" href="#v11" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.1</h2>
+<a id="script" class="anchor" href="#script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Script</h2>
 
-<p>It's a remake of Master branch and v1.0 where it was configured with 2 libraries one of which was a jQuery approach.</p>
+<p>After adding the above script, right after add:</p>
 
-<p>This new version is build only into JavaScript and the library has 1.5kb compressed. Also I have added a composer.json to be easier to install.</p>
-        </section>
+<pre lang="$xslt"><code>&lt;script&gt;
+SocialMedia.init();
+&lt;/script&gt;
+</code></pre>
 
-        <aside id="sidebar">
-          <a href="https://github.com/bovidiu/js-sharing-buttons/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/bovidiu/js-sharing-buttons/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+<p>It shoould look like similar to this:</p>
 
-          <p class="repo-owner"><a href="https://github.com/bovidiu/js-sharing-buttons"></a> is maintained by <a href="https://github.com/bovidiu">bovidiu</a>.</p>
+<pre lang="$xslt"><code>&lt;script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+SocialMedia.init();
+&lt;/script&gt;
+</code></pre>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+<h2>
+<a id="html" class="anchor" href="#html" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HTML</h2>
+
+<p>Add any where in the page a div or any HTML element with a class called <code>socialMedia</code>, ie:</p>
+
+<pre><code>&lt;div class="socialMedia"&gt;&lt;/div&gt;
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/bovidiu/js-sharing-buttons">JavaScript Sharing Buttons</a> is maintained by <a href="https://github.com/bovidiu">bovidiu</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
 
   
   </body>
