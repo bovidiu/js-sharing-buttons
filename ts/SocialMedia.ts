@@ -14,8 +14,15 @@ export class SocialMedia implements SocialMediaInterface {
       icon : {
         facebook : {
           name: 'facebook',
+          class: null,
+          id: null,
           active : true,
-          url : 'http://www.facebook.com/sharer.php?u='
+          url : 'http://www.facebook.com/sharer.php?u=',
+          app: {
+            id: null,
+            redirect_uri: null,
+            url: 'https://www.facebook.com/dialog/share'
+          }
         },
         twitter : {
           name: 'twitter',
@@ -31,6 +38,11 @@ export class SocialMedia implements SocialMediaInterface {
           name: 'linkedin',
           active : false,
           url : 'http://www.linkedin.com/shareArticle?mini=true&url='
+        },
+        google : {
+          name: 'google',
+          active : false,
+          url : 'https://plus.google.com/share?url='
         },
       }
     };
@@ -145,4 +157,13 @@ export class SocialMedia implements SocialMediaInterface {
     elem.href         = url + window.location.href;
     availableTags[i].appendChild(elem);
   }
+
+  private _getPageTitle(): string{
+     return windowd.title;
+  }
+
+  private  _getPageUrl(){
+    return window.location.href;
+  }
+
 }

@@ -145,6 +145,35 @@ describe('Default Social Media', function () {
             }
             done();
         });
+        /* linkedin icon */
+        it('should have icon google object assign', function (done) {
+            var userConfig = sm.getConfig();
+            if (!userConfig.icon.google) {
+                throw new Error('Expected icon.google object to be assign');
+            }
+            done();
+        });
+        it('should have name assign to icon.google ', function (done) {
+            var userConfig = sm.getConfig();
+            if (!userConfig.icon.google.name) {
+                throw new Error('Expected icon.google should have a name');
+            }
+            done();
+        });
+        it('should have to be set active icon.google ', function (done) {
+            var userConfig = sm.getConfig();
+            if (userConfig.icon.linkedin.google) {
+                throw new Error('Expected icon.google not to be active');
+            }
+            done();
+        });
+        it('should have to have a url set to active icon.google ', function (done) {
+            var userConfig = sm.getConfig();
+            if (!userConfig.icon.google.url) {
+                throw new Error('Expected url to be present in icon.google');
+            }
+            done();
+        });
     });
     describe('#getConfigElement(elem)', function () {
         it('should get value of defaultTarget', function (done) {
