@@ -50,7 +50,4 @@ export interface SocialMediaInterface{
    */
   createAnchor(target, i, cls, url): any;
 
-  _getPageTitle(): string ;
-
-  _getPageUrl(): any ;
 }

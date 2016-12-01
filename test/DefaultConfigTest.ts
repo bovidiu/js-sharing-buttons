@@ -1,11 +1,11 @@
 /// <reference path="../typings/mocha/mocha.d.ts" />
-import  { SocialMedia }   from '../ts/SocialMedia';
+import { SocialMedia } from "../ts/SocialMedia";
 
 describe('Default Social Media', () =>{
   let sm : SocialMedia;
 
   beforeEach(function () {
-    sm = new SocialMedia()
+    sm = new SocialMedia();;;;;;;
     this.timeout(100);
   });
   describe('#getConfig()', function() {
@@ -64,6 +64,46 @@ describe('Default Social Media', () =>{
       let userConfig = sm.getConfig();
       if(!userConfig.icon.facebook.url){
         throw new Error('Expected url to be present in icon.facebook');
+      }
+      done();
+    });
+    it('should have class empty string icon.facebook.class ', function (done) {
+      let userConfig = sm.getConfig();
+      let fb         = userConfig.icon.facebook.class;
+      if (fb.length > 0) {
+        throw new Error('Expected to be empty string icon.facebook.class');
+      }
+      done();
+    });
+    it('should have id empty string icon.facebook.class ', function (done) {
+      let userConfig = sm.getConfig();
+      let fb         = userConfig.icon.facebook.id;
+      if (fb.length > 0) {
+        throw new Error('Expected to be empty string on icon.facebook.id');
+      }
+      done();
+    });
+    it('should have app.id empty string icon.facebook ', function (done) {
+      let userConfig = sm.getConfig();
+      let fb         = userConfig.icon.facebook.app.id;
+      if (fb.length > 0) {
+        throw new Error('Expected to be empty string on icon.facebook.app.id');
+      }
+      done();
+    });
+    it('should have app.redirect_uri empty string icon.facebook ', function (done) {
+      let userConfig = sm.getConfig();
+      let fb         = userConfig.icon.facebook.app.redirect_uri;
+      if (fb.length > 0) {
+        throw new Error('Expected to be empty string on icon.facebook.app.id');
+      }
+      done();
+    });
+    it('should have app.url set icon.facebook ', function (done) {
+      let userConfig = sm.getConfig();
+      let fb         = userConfig.icon.facebook.app.url;
+      if (!fb.length) {
+        throw new Error('Expected a url for icon.facebook.app.url');
       }
       done();
     });

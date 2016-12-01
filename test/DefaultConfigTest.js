@@ -58,6 +58,46 @@ describe('Default Social Media', function () {
             }
             done();
         });
+        it('should have class empty string icon.facebook.class ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.facebook["class"];
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string icon.facebook.class');
+            }
+            done();
+        });
+        it('should have id empty string icon.facebook.class ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.facebook.id;
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string on icon.facebook.id');
+            }
+            done();
+        });
+        it('should have app.id empty string icon.facebook ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.facebook.app.id;
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string on icon.facebook.app.id');
+            }
+            done();
+        });
+        it('should have app.redirect_uri empty string icon.facebook ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.facebook.app.redirect_uri;
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string on icon.facebook.app.id');
+            }
+            done();
+        });
+        it('should have app.url set icon.facebook ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.facebook.app.url;
+            if (!fb.length) {
+                throw new Error('Expected a url for icon.facebook.app.url');
+            }
+            done();
+        });
         /* Twitter icon */
         it('should have icon Twitter object assign', function (done) {
             var userConfig = sm.getConfig();

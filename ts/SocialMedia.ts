@@ -1,8 +1,7 @@
-import { SocialMediaInterface } from './SocialMediaInterface';
+import { SocialMediaInterface } from "./SocialMediaInterface";
 export class SocialMedia implements SocialMediaInterface {
   config: any;
   userConfig: any;
-
   /**
    * Class constructor
    * Builds default configurations and sets any custom configuration if the parameter is pass
@@ -14,13 +13,13 @@ export class SocialMedia implements SocialMediaInterface {
       icon : {
         facebook : {
           name: 'facebook',
-          class: null,
-          id: null,
+          class : '',
+          id : '',
           active : true,
           url : 'http://www.facebook.com/sharer.php?u=',
           app: {
-            id: null,
-            redirect_uri: null,
+            id : '',
+            redirect_uri : '',
             url: 'https://www.facebook.com/dialog/share'
           }
         },
@@ -156,14 +155,6 @@ export class SocialMedia implements SocialMediaInterface {
     elem.className    = 'social-icon icon-'+cls;
     elem.href         = url + window.location.href;
     availableTags[i].appendChild(elem);
-  }
-
-  private _getPageTitle(): string{
-     return windowd.title;
-  }
-
-  private  _getPageUrl(){
-    return window.location.href;
   }
 
 }
