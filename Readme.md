@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/bovidiu/js-sharing-buttons.svg?branch=v1.4-dev)](https://travis-ci.org/bovidiu/js-sharing-buttons)
 #Social Media Sharing Buttons
-Social media buttons to share your page to social media; already configured to use font-awesome icons.
+Social media buttons to share your page to social media;
 
 The current library of social media list includes:
 * Facebook
@@ -31,7 +31,8 @@ SRI CDN
 After adding the above script, right after add:
 ```$xslt
 <script>
-SocialMedia.init();
+var sm = new SocialMedia();
+sm.init();
 </script>
 ```
 It shoould look like similar to this:
@@ -39,7 +40,8 @@ It shoould look like similar to this:
 ```$xslt
 <script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js"></script>
 <script>
-SocialMedia.init();
+var sm = new SocialMedia();
+sm.init();
 </script>
 ```
 
@@ -50,5 +52,49 @@ Add any where in the page a div or any HTML element with a class called `socialM
 <div class="socialMedia"></div>
 ```
 
+## Custom settings
+The library supports multiple instances in a page as well as custom configurations.
+
+### Change target element class
+When the library get initialize include a `defaultTarget` class.
+
+```$xslt
+<script>
+var sm = new SocialMedia({
+  defaultTarget: 'myElementClassTarget'
+});
+sm.init();
+</script>
+```
+### Activate/Deactivate buttons
+By default the library will show Facebook and Twitter links, however you can enable/disable all icons.
+Example:
+#### Activate LinkedIn button
+```$xslt
+<script>
+var sm = new SocialMedia({
+  icon: {
+    linkedin: {
+      active : true
+    }
+  }
+});
+sm.init();
+</script>
+```
+#### Deactivate Facebook button
+
+```$xslt
+<script>
+var sm = new SocialMedia({
+  icon: {
+    facebook: {
+      active : false
+    }
+  }
+});
+sm.init();
+</script>
+```
 
 
