@@ -1,6 +1,6 @@
 {
   "name": "js-sharing-buttons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create Social media links.",
   "main": "dist/SocialMedia.js",
   "directories": {
