@@ -24,7 +24,7 @@
 <h1>
 <a id="social-media-sharing-buttons" class="anchor" href="#social-media-sharing-buttons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Social Media Sharing Buttons</h1>
 
-<p>Social media buttons to share your page to social media; already configured to use font-awesome icons.</p>
+<p>Social media buttons to share your page to social media.</p>
 
 <p>The current library of social media list includes:</p>
 
@@ -64,7 +64,8 @@
 <p>After adding the above script, right after add:</p>
 
 <pre lang="$xslt"><code>&lt;script&gt;
-SocialMedia.init();
+var sm = new SocialMedia();
+sm.init();
 &lt;/script&gt;
 </code></pre>
 
@@ -72,7 +73,8 @@ SocialMedia.init();
 
 <pre lang="$xslt"><code>&lt;script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-SocialMedia.init();
+var sm = new SocialMedia();
+sm.init();
 &lt;/script&gt;
 </code></pre>
 
@@ -82,6 +84,60 @@ SocialMedia.init();
 <p>Add any where in the page a div or any HTML element with a class called <code>socialMedia</code>, ie:</p>
 
 <pre><code>&lt;div class="socialMedia"&gt;&lt;/div&gt;
+</code></pre>
+
+<h2>
+<a id="custom-settings" class="anchor" href="#custom-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Custom settings</h2>
+
+<p>The library supports multiple instances in a page as well as custom configurations.</p>
+
+<h3>
+<a id="change-target-element-class" class="anchor" href="#change-target-element-class" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Change target element class</h3>
+
+<p>When the library get initialize include a <code>defaultTarget</code> class.</p>
+
+<pre lang="$xslt"><code>&lt;script&gt;
+var sm = new SocialMedia({
+  defaultTarget: 'myElementClassTarget'
+});
+sm.init();
+&lt;/script&gt;
+</code></pre>
+
+<h3>
+<a id="activatedeactivate-buttons" class="anchor" href="#activatedeactivate-buttons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Activate/Deactivate buttons</h3>
+
+<p>By default the library will show Facebook and Twitter links, however you can enable/disable all icons.
+Example:</p>
+
+<h4>
+<a id="activate-linkedin-button" class="anchor" href="#activate-linkedin-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Activate LinkedIn button</h4>
+
+<pre lang="$xslt"><code>&lt;script&gt;
+var sm = new SocialMedia({
+  icon: {
+    linkedin: {
+      active : true
+    }
+  }
+});
+sm.init();
+&lt;/script&gt;
+</code></pre>
+
+<h4>
+<a id="deactivate-facebook-button" class="anchor" href="#deactivate-facebook-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deactivate Facebook button</h4>
+
+<pre lang="$xslt"><code>&lt;script&gt;
+var sm = new SocialMedia({
+  icon: {
+    facebook: {
+      active : false
+    }
+  }
+});
+sm.init();
+&lt;/script&gt;
 </code></pre>
 
       <footer class="site-footer">
