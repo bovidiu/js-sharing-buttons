@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>js-sharing-buttons</title>
+	<title>Social Media Buttons</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">js-sharing-buttons</a>
+					<a href="index.html" class="title">Social Media Buttons</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> js-sharing-buttons</h1>
+			<h1> Social Media Buttons</h1>
 		</div>
 	</div>
 </header>
@@ -64,20 +64,93 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<p><a href="https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/v1.1/dependencies/npm"><img src="https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/badges/dependencies.svg" alt="bitHound Dependencies"></a>
-					<a href="https://www.bithound.io/github/bovidiu/js-sharing-bootstrap"><img src="https://www.bithound.io/github/bovidiu/js-sharing-bootstrap/badges/score.svg" alt="bitHound Overall Score"></a>
-				<a href="https://travis-ci.org/bovidiu/js-sharing-buttons"><img src="https://travis-ci.org/bovidiu/js-sharing-buttons.svg?branch=v1.4-dev" alt="Build Status"></a></p>
+				<p><a href="https://travis-ci.org/bovidiu/js-sharing-buttons"><img src="https://travis-ci.org/bovidiu/js-sharing-buttons.svg?branch=v1.4-dev" alt="Build Status"></a></p>
 				<p>#Social Media Sharing Buttons
-				Social media buttons to share your page to social media; already configured to use font-awesome icons.</p>
+				Social media buttons to share your page to social media;</p>
 				<p>The current library of social media list includes:</p>
 				<ul>
 					<li>Facebook</li>
 					<li>Twitter</li>
 					<li>LinkedIn</li>
 					<li>Pinterest</li>
+					<li>Google</li>
+					<li>Digg</li>
+					<li>Tumblr</li>
+					<li>Reddit</li>
+					<li>VKontakte</li>
+					<li>Delicious</li>
+					<li>Gmail</li>
+					<li>Blogger</li>
+					<li>Amazon</li>
+					<li>Bitly</li>
 				</ul>
-				<p>#Configure
-				By default it will look for <code>socialMedia</code> class and will try to render Facebook and Twitter icons</p>
+				<p>#Install
+				You can use composer to install it <code>composer require bovidiu/js-sharing-bootstrap</code> or npm <code>npm i js-sharing-buttons</code> </p>
+				<p>Or implement it manually by adding the script in the footer of the pagelike:</p>
+				<pre><code class="lang-$xslt">&lt;script src=&quot;/path/to/js/SocialMedia.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+				<p>or use the CDN</p>
+				<pre><code class="lang-$xslt">&lt;script src=&quot;https://cdn.jsdelivr.net/socialmedia.js/latest/SocialMedia.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+				<p>SRI CDN</p>
+				<pre><code class="lang-$xslt">&lt;script src=&quot;https://cdn.jsdelivr.net/socialmedia.js/latest/SocialMedia.min.js&quot; integrity=&quot;sha256-aq2Jk+ughOTxmvjt+RG7mStscd7Cpr/ifg2rkkc6z7E=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+</code></pre>
+				<p>#Configure</p>
+				<h2 id="script">Script</h2>
+				<p>After adding the above script, right after add:</p>
+				<pre><code class="lang-$xslt">&lt;script&gt;
+var sm = new SocialMedia();
+sm.init();
+&lt;/script&gt;
+</code></pre>
+				<p>It shoould look like similar to this:</p>
+				<pre><code class="lang-$xslt">&lt;script src=&quot;https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+var sm = new SocialMedia();
+sm.init();
+&lt;/script&gt;
+</code></pre>
+				<h2 id="html">HTML</h2>
+				<p>Add any where in the page a div or any HTML element with a class called <code>socialMedia</code>, ie:</p>
+				<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"socialMedia"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+</code></pre><h2 id="custom-settings">Custom settings</h2>
+				<p>The library supports multiple instances in a page as well as custom configurations.</p>
+				<h3 id="change-target-element-class">Change target element class</h3>
+				<p>When the library get initialize include a <code>defaultTarget</code> class.</p>
+				<pre><code class="lang-$xslt">&lt;script&gt;
+var sm = new SocialMedia({
+  defaultTarget: &#39;myElementClassTarget&#39;
+});
+sm.init();
+&lt;/script&gt;
+</code></pre>
+				<h3 id="activate-deactivate-buttons">Activate/Deactivate buttons</h3>
+				<p>By default the library will show Facebook and Twitter links, however you can enable/disable all icons.
+				Example:</p>
+				<h4 id="activate-linkedin-button">Activate LinkedIn button</h4>
+				<pre><code class="lang-$xslt">&lt;script&gt;
+var sm = new SocialMedia({
+  icon: {
+    linkedin: {
+      active : true
+    }
+  }
+});
+sm.init();
+&lt;/script&gt;
+</code></pre>
+				<h4 id="deactivate-facebook-button">Deactivate Facebook button</h4>
+				<pre><code class="lang-$xslt">&lt;script&gt;
+var sm = new SocialMedia({
+  icon: {
+    facebook: {
+      active : false
+    }
+  }
+});
+sm.init();
+&lt;/script&gt;
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">

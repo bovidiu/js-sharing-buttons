@@ -2,6 +2,7 @@ import { SocialMediaInterface } from "./SocialMediaInterface";
 export class SocialMedia implements SocialMediaInterface {
   config: any;
   userConfig: any;
+
   /**
    * Class constructor
    * Builds default configurations and sets any custom configuration if the parameter is pass
@@ -10,38 +11,122 @@ export class SocialMedia implements SocialMediaInterface {
   constructor(user = null) {
     this.config = {
       defaultTarget : 'socialMedia',
+      popup : false,
+      fontawesome: false,
       icon : {
         facebook : {
-          name: 'facebook',
+          name : 'facebook',
           class : '',
+          fonta: 'fa fa-facebook-official',
           id : '',
           active : true,
           url : 'http://www.facebook.com/sharer.php?u=',
-          app: {
+          app : {
             id : '',
             redirect_uri : '',
-            url: 'https://www.facebook.com/dialog/share'
+            url : 'https://www.facebook.com/dialog/share'
           }
         },
         twitter : {
-          name: 'twitter',
+          name : 'twitter',
+          class : '',
+          fonta: 'fa fa-twitter',
+          id : '',
           active : true,
           url : 'http://twitter.com/share?url='
         },
         pinterest : {
-          name: 'pinterest',
+          name : 'pinterest',
+          class : '',
+          fonta: 'fa fa-pinterest',
+          id : '',
           active : false,
           url : 'http://pinterest.com/pin/create/button/?url='
         },
         linkedin : {
-          name: 'linkedin',
+          name : 'linkedin',
+          fonta: 'fa fa-linkedin-square',
+          class : '',
+          id : '',
           active : false,
           url : 'http://www.linkedin.com/shareArticle?mini=true&url='
         },
         google : {
-          name: 'google',
+          name : 'google',
+          fonta: 'fa fa-google-plus-official',
+          class : '',
+          id : '',
           active : false,
           url : 'https://plus.google.com/share?url='
+        },
+        digg : {
+          name : 'digg',
+          class : '',
+          fonta: 'fa fa-digg',
+          id : '',
+          active : false,
+          url : 'http://digg.com/submit?url='
+        },
+        Tumblr : {
+          name : 'tumblr',
+          class : '',
+          fonta: 'fa fa-tumblr',
+          id : '',
+          active : false,
+          url : 'https://www.tumblr.com/share?v=3&u='
+        },
+        Reddit : {
+          name : 'reddit',
+          class : '',
+          fonta: 'fa fa-reddit',
+          id : '',
+          active : false,
+          url : 'http://www.reddit.com/submit?url='
+        },
+        VKontakte : {
+          name : 'vkontakte',
+          class : '',
+          id : '',
+          active : false,
+          url : 'http://vk.com/share.php?url='
+        },
+        Delicious : {
+          name : 'delicious',
+          class : '',
+          fonta: 'fa fa-delicious',
+          id : '',
+          active : false,
+          url : 'https://delicious.com/post?url='
+        },
+        GMail : {
+          name : 'gmail',
+          class : '',
+          fonta: 'fa fa-envelope',
+          id : '',
+          active : false,
+          url : 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to&ui=2&tf=1&body='
+        },
+        Blogger : {
+          name : 'blogger',
+          class : '',
+          id : '',
+          active : false,
+          url : 'https://www.blogger.com/blog_this.pyra?t&u='
+        },
+        Amazon : {
+          name : 'amazon',
+          class : '',
+          fonta: 'fa fa-amazon',
+          id : '',
+          active : false,
+          url : 'http://www.amazon.com/gp/wishlist/static-add?u='
+        },
+        Bitly : {
+          name : 'bitly',
+          class : '',
+          id : '',
+          active : false,
+          url : 'https://bitly.com/a/bitmarklet?u='
         },
       }
     };
@@ -103,12 +188,12 @@ export class SocialMedia implements SocialMediaInterface {
    * Initialise creation of links
    */
   init(): any {
-    let currentTag    = this.getConfigElement('defaultTarget');
+    let currentTag = this.getConfigElement('defaultTarget');
     if (currentTag !== 'undefined') {
       let availableTags = document.querySelectorAll('.' + currentTag);
       if (availableTags.length) {
         for (let i = 0; i < availableTags.length; i++) {
-          this.createIcons(currentTag,i)
+          this.createIcons(currentTag, i)
         }
       }
     }
@@ -119,10 +204,10 @@ export class SocialMedia implements SocialMediaInterface {
    * @param currentTag
    * @param i
    */
-  createIcons(currentTag, i): any{
+  createIcons(currentTag, i): any {
     let activeIcons = this.getActiveIcons();
-    for(let icon in activeIcons){
-      this.createAnchor(currentTag, i,activeIcons[icon].name,activeIcons[icon].url);
+    for (let icon in activeIcons) {
+      this.createAnchor(currentTag, i, activeIcons[icon].name, activeIcons[icon].url);
     }
   }
 
@@ -152,9 +237,54 @@ export class SocialMedia implements SocialMediaInterface {
   createAnchor(target, i, cls, url): any {
     let availableTags = document.querySelectorAll('.' + target);
     let elem          = document.createElement('a');
-    elem.className    = 'social-icon icon-'+cls;
+    elem.className = 'social-icon smi icon-' + cls;
     elem.href         = url + window.location.href;
+    // Click popup window
+    if(this.getConfigElement('popup')){
+      elem.onclick = this.handleDataLoaded.bind(this);
+    }
+    //add fontawesome element if FA is activated
+    if(this.getConfigElement('fontawesome')){
+      this.createFontAwesomeElement(elem,cls);
+    }
     availableTags[i].appendChild(elem);
   }
 
+  /**
+   * Append anchor font-awesome icon
+   * @param target
+   * @param name
+   * @returns {Node}
+   */
+  createFontAwesomeElement(target,name): any{
+      let ielem = document.createElement('i');
+      let iCls = this.getConfigElement('icon');
+      ielem.className = iCls[name].fonta;
+     return target.appendChild(ielem);
+  }
+
+  /**
+   * Handle click event
+   * @param e
+   */
+  handleDataLoaded(e){
+    e.preventDefault();
+    this._popup(e.srcElement.parentNode.href);
+  }
+
+  /**
+   * Create popup window
+   * @param path
+   * @returns {Window}
+   * @private
+   */
+  private _popup(path): any {
+    let width = window.innerWidth/16;
+    let height = window.innerHeight/9;
+    if(width < 300 && height < 100){
+      width = 320;
+      height = 300;
+    }
+    return window.open(path,'Social Media Sharing Window',"height="+height+",width="+width+"");
+  }
 }

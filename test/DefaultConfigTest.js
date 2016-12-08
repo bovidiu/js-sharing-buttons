@@ -15,6 +15,13 @@ describe('Default Social Media', function () {
             }
             done();
         });
+        it('should set false popup', function (done) {
+            var userConfig = sm.getConfig();
+            if (userConfig.popup) {
+                throw new Error('Popup shuld be set false by default');
+            }
+            done();
+        });
         it('should have assign socialMedia to defaultTarget', function (done) {
             var userConfig = sm.getConfig();
             if (userConfig.defaultTarget !== 'socialMedia') {
@@ -66,7 +73,7 @@ describe('Default Social Media', function () {
             }
             done();
         });
-        it('should have id empty string icon.facebook.class ', function (done) {
+        it('should have id empty string icon.facebook.id ', function (done) {
             var userConfig = sm.getConfig();
             var fb = userConfig.icon.facebook.id;
             if (fb.length > 0) {
@@ -127,6 +134,22 @@ describe('Default Social Media', function () {
             }
             done();
         });
+        it('should have class empty string icon.twitter.class ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.twitter["class"];
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string icon.twitter.class');
+            }
+            done();
+        });
+        it('should have id empty string icon.twitter.id ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.twitter.id;
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string on icon.twitter.id');
+            }
+            done();
+        });
         /* pinterest icon */
         it('should have icon pinterest object assign', function (done) {
             var userConfig = sm.getConfig();
@@ -153,6 +176,22 @@ describe('Default Social Media', function () {
             var userConfig = sm.getConfig();
             if (!userConfig.icon.pinterest.url) {
                 throw new Error('Expected url to be present in icon.pinterest');
+            }
+            done();
+        });
+        it('should have class empty string icon.pinterest.class ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.pinterest["class"];
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string icon.pinterest.class');
+            }
+            done();
+        });
+        it('should have id empty string icon.pinterest.id ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.pinterest.id;
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string on icon.pinterest.id');
             }
             done();
         });
@@ -185,7 +224,23 @@ describe('Default Social Media', function () {
             }
             done();
         });
-        /* linkedin icon */
+        it('should have class empty string icon.linkedin.class ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.linkedin["class"];
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string icon.linkedin.class');
+            }
+            done();
+        });
+        it('should have id empty string icon.linkedin.id ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.linkedin.id;
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string on icon.linkedin.id');
+            }
+            done();
+        });
+        /* google plus icon */
         it('should have icon google object assign', function (done) {
             var userConfig = sm.getConfig();
             if (!userConfig.icon.google) {
@@ -214,6 +269,22 @@ describe('Default Social Media', function () {
             }
             done();
         });
+        it('should have class empty string icon.google.class ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.google["class"];
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string icon.google.class');
+            }
+            done();
+        });
+        it('should have id empty string icon.google.id ', function (done) {
+            var userConfig = sm.getConfig();
+            var fb = userConfig.icon.google.id;
+            if (fb.length > 0) {
+                throw new Error('Expected to be empty string on icon.google.id');
+            }
+            done();
+        });
     });
     describe('#getConfigElement(elem)', function () {
         it('should get value of defaultTarget', function (done) {
@@ -227,6 +298,13 @@ describe('Default Social Media', function () {
             var userConfig = sm.getConfigElement('icon');
             if (typeof userConfig !== 'object') {
                 throw new Error('Expected icons to be an object');
+            }
+            done();
+        });
+        it('should be set false popup', function (done) {
+            var userConfig = sm.getConfigElement('popup');
+            if (userConfig) {
+                throw new Error('Expected popup to be set as false');
             }
             done();
         });

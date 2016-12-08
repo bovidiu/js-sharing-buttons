@@ -7,6 +7,16 @@ The current library of social media list includes:
 * Twitter
 * LinkedIn
 * Pinterest
+* Google
+* Digg
+* Tumblr
+* Reddit
+* VKontakte
+* Delicious
+* Gmail
+* Blogger
+* Amazon
+* Bitly
 
 #Install
 You can use composer to install it `composer require bovidiu/js-sharing-bootstrap` or npm `npm i js-sharing-buttons` 
@@ -18,11 +28,11 @@ Or implement it manually by adding the script in the footer of the pagelike:
 ```
 or use the CDN
 ```$xslt
-<script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js"></script>
+<script src="https://cdn.jsdelivr.net/socialmedia.js/latest/SocialMedia.min.js"></script>
 ```
 SRI CDN
 ```$xslt
-<script src="https://cdn.jsdelivr.net/socialmedia.js/1.0/SocialMedia.min.js" integrity="sha256-aq2Jk+ughOTxmvjt+RG7mStscd7Cpr/ifg2rkkc6z7E=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/socialmedia.js/latest/SocialMedia.min.js" integrity="sha256-aq2Jk+ughOTxmvjt+RG7mStscd7Cpr/ifg2rkkc6z7E=" crossorigin="anonymous"></script>
 ```
 
 #Configure

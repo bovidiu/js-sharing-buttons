@@ -1,17 +1,17 @@
 {
   "name": "js-sharing-buttons",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Create Social media links.",
   "main": "dist/SocialMedia.js",
   "directories": {
+    "doc": "doc",
     "test": "tests"
   },
   "dependencies": {
-    "typescript": "^2.0.9",
-    "node": "^0.0.0",
-    "core-js": "^2.4.1"
   },
   "devDependencies": {
+    "typescript": "^2.0.9",
+    "core-js": "^2.4.1",
     "chai": "^3.5.0",
     "codeceptjs": "^0.4.9",
     "gulp": "^3.9.1",
@@ -19,6 +19,7 @@
     "gulp-minify": "0.0.14",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
+    "gulp-typedoc": "^2.0.1",
     "gulp-uglify": "^2.0.0",
     "http-server": "^0.9.0",
     "mocha": "^3.1.2",
