@@ -50,4 +50,17 @@ export interface SocialMediaInterface{
    */
   createAnchor(target, i, cls, url): any;
 
+  /**
+   * Create anchor
+   * @param target
+   * @param name
+   */
+  createFontAwesomeElement(target,name) : any;
+
+  /**
+   * Handle click event
+   * @param e
+   */
+  handleDataLoaded(e): any;
+
 }
