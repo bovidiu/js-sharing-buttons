@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/bovidiu/js-sharing-buttons.svg?branch=v1.4-dev)](https://travis-ci.org/bovidiu/js-sharing-buttons)
+
+[![](https://data.jsdelivr.com/v1/package/npm/js-sharing-buttons/badge)](https://www.jsdelivr.com/package/npm/js-sharing-buttons)
+
 #Social Media Sharing Buttons
+
 Social media buttons to share your page to social media;
 
 The current library of social media list includes:
