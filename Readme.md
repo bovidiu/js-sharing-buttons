@@ -2,6 +2,10 @@
 
 [![](https://data.jsdelivr.com/v1/package/npm/js-sharing-buttons/badge)](https://www.jsdelivr.com/package/npm/js-sharing-buttons)
 
+[![npm](https://img.shields.io/npm/dt/js-sharing-buttons.svg?logo=npm)](https://www.npmjs.com/package/js-sharing-buttons)
+
+
+
 #Social Media Sharing Buttons
 
 Social media buttons to share your page to social media;
