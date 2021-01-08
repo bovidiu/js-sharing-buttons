@@ -5,8 +5,11 @@
 [![npm](https://img.shields.io/npm/dt/js-sharing-buttons.svg?logo=npm)](https://www.npmjs.com/package/js-sharing-buttons)
 
 
+# :warning: New Version
+In the next few months we are looking to optimise the small library and extended. Feel free to join our discussion https://github.com/bovidiu/js-sharing-buttons/discussions and let us know your oppinion or just introduce yourself.
 
-#Social Media Sharing Buttons
+
+# Social Media Sharing Buttons
 
 Social media buttons to share your page to social media;
 
