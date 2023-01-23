@@ -1,26 +1,21 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "lib": ["es2015", "esnext", "DOM"],
+    "esModuleInterop": true,
+    "downlevelIteration": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "sourceMap": true ,
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": true,
+    "resolveJsonModule": true,
     "noImplicitAny": false,
-    "outDir": "./lib"
+    "skipLibCheck": true,
+    "outDir": "./dist"
   },
-  "paths": {
-    "*": [
-      "./@types/*"
-    ]
-  },
-  "include": [
-    "ts/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts",
-    "ts/SocialMediaInterface.ts"
-  ]
+  "typeRoots": ["./node_modules/@types", "./src/Declarations"],
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./node_modules"]
 }
