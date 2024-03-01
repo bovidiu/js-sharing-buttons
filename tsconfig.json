@@ -19,8 +19,6 @@
     "ts/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "**/*.spec.ts",
-    "ts/SocialMediaInterface.ts"
+    "node_modules"
   ]
 }
