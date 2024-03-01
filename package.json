@@ -7,12 +7,13 @@
     "doc": "doc",
     "test": "tests"
   },
-  "dependencies": {
-  },
   "devDependencies": {
-    "typescript": "^2.0.9",
     "codeceptjs": "^0.4.9",
-    "typedoc": "^0.5.1"
+    "typedoc": "^0.5.1",
+    "typescript": "^2.9.2",
+    "typescript-cli": "^0.1.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
     "pretest": "tsc test/*Test.ts --module commonjs"
@@ -21,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/bovidiu/js-sharing-buttons.git"
   },
-  "author": "Ovidiu S Bokar <ovidiu.bokar@gmail.com>(http://www.ovidiubokar.com)",
+  "author": "Ovidiu S Bokar <ovidiu.bokar@gmail.com>(https://www.bokarsolutions.co.uk)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bovidiu/js-sharing-buttons/issues"
