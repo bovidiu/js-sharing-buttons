@@ -1,0 +1,9 @@
+{
+  "allReflectionsHaveOwnDocument": true,
+  "cleanOutputDir": false,
+  "githubPages": false,
+  "name": "template",
+  "out": "docs",
+  "preserveWatchOutput": true,
+  "externalPattern": "**/node_modules/**"
+}

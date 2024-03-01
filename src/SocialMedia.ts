@@ -1,1 +1,3 @@
-console.log("test")
+const defaultConfig:defaultConfig = {
+    target:".socialMedia"
+}
