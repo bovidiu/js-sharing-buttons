@@ -159,3 +159,4 @@ jspm_packages
 ts/*.js
 test/DefaultConfigTest.js
 
+dist

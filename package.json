@@ -9,14 +9,15 @@
   },
   "devDependencies": {
     "codeceptjs": "^0.4.9",
+    "ts-loader": "^9.5.1",
     "typedoc": "^0.5.1",
-    "typescript": "^2.9.2",
-    "typescript-cli": "^0.1.0",
+    "typescript": "^5.3.3",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "pretest": "tsc test/*Test.ts --module commonjs"
+    "pretest": "tsc test/*Test.ts --module commonjs",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
