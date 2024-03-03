@@ -1,6 +1,8 @@
 import basicAnchorShare from "../../utils/createBasicAnchro";
 import getPageURL from "../../utils/pageUrl";
-
+/**
+ * Default URL
+ */
 const URL:string =  `https://twitter.com/intent/tweet?text=${getPageURL()}`;
 /**
  * ID for the module

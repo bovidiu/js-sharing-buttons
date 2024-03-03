@@ -3,7 +3,7 @@ import getPageURL from "../../utils/pageUrl";
 /**
  * Default URL
  */
-const URL:string = `http://digg.com/submit?url=${getPageURL()}`;
+const URL:string = `https://digg.com/submit?url=${getPageURL()}`;
 /**
  * ID for the module
  */
