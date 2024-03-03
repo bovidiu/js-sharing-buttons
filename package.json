@@ -18,6 +18,7 @@
   "scripts": {
     "pretest": "tsc test/*Test.ts --module commonjs",
     "build": "webpack",
+    "dev": "webpack && npx serve ./dist",
     "documentation": "typedoc ./src --out ./docs --ignoreCompilerErrors "
   },
   "repository": {
