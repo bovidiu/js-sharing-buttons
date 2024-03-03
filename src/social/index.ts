@@ -43,7 +43,6 @@ const social:defaultIcons = {
 }
 
 const socialCall = (config:defaultConfig) => {
-    console.log(config);
     if(config.icon){
         Object.keys(config.icon).forEach((ico:any) => {
             // @ts-ignore
