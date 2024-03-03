@@ -28,3 +28,4 @@ exclude:
       - lib
       - node_modules
       - qodana.sarif.json
+      - docs

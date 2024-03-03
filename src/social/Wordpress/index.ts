@@ -1,6 +1,6 @@
 import getPageURL from "../../utils/pageUrl";
 import getPageTitle from "../../utils/pageTitle";
-import basicAnchorShare from "../../utils/createBasicAnchro";
+import basicAnchorShare from "../../utils/createBasicAnchor";
 /**
  * Default URL
  */

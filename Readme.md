@@ -14,23 +14,29 @@ In the next few months we are looking to optimise the small library and extended
 Social media buttons to share your page to social media;
 
 The current library of social media list includes:
-* Facebook
-* Twitter
-* LinkedIn
-* Pinterest
-* Google
-* Digg
-* Tumblr
-* Reddit
-* VKontakte
-* Delicious
-* Gmail
-* Blogger
-* Amazon
-* Bitly
+* Amazon,
+* Bitly,
+* Blogger,
+* Buffer,
+* Delicious,
+* Digg,
+* Email,
+* Evernote,
+* Facebook,
+* GMail,
+* LinkedIn,
+* Pinterest,
+* Pocket,
+* Reddit,
+* StumbleUpon,
+* Telegram,
+* Tumblr,
+* Twitter,
+* WhatsApp,
+* Wordpress,
 
 #Install
-You can use composer to install it `composer require bovidiu/js-sharing-bootstrap` or npm `npm i js-sharing-buttons` 
+Using npm `npm i js-sharing-buttons` 
 
 Or implement it manually by adding the script in the footer of the pagelike:
 
@@ -46,7 +52,7 @@ SRI CDN
 <script src="https://cdn.jsdelivr.net/socialmedia.js/latest/SocialMedia.min.js" integrity="sha256-aq2Jk+ughOTxmvjt+RG7mStscd7Cpr/ifg2rkkc6z7E=" crossorigin="anonymous"></script>
 ```
 
-#Configure
+# Configure
 
 ## Script
 After adding the above script, right after add:

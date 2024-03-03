@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;social/WordPress/index&quot; | js-sharing-buttons</title>
+	<title>&quot;social/Wordpress/index&quot; | js-sharing-buttons</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_social_wordpress_index_.html">&quot;social/WordPress/index&quot;</a>
+					<a href="_social_wordpress_index_.html">&quot;social/Wordpress/index&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;social/WordPress/index&quot;</h1>
+			<h1>External module &quot;social/Wordpress/index&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,13 +73,14 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_social_wordpress_index_.html#id" class="tsd-kind-icon">ID</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_social_wordpress_index_.html#url" class="tsd-kind-icon">URL</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_social_wordpress_index_.html#evernote" class="tsd-kind-icon">Evernote</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_social_wordpress_index_.html#wordpress" class="tsd-kind-icon">Wordpress</a></li>
 							</ul>
 						</section>
 					</div>
@@ -88,32 +89,63 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="url" class="tsd-anchor"></a>
-					<h3>URL</h3>
-					<div class="tsd-signature tsd-kind-icon">URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;https://www.evernote.com/clip.action?url&#x3D;[post-url]&amp;title&#x3D;[post-title]&quot;</span></div>
+					<a name="id" class="tsd-anchor"></a>
+					<h3>ID</h3>
+					<div class="tsd-signature tsd-kind-icon">ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Wordpress&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in social/WordPress/index.ts:1</li>
+							<li>Defined in <a href="https://github.com/bovidiu/js-sharing-buttons/blob/0dbc44d/src/social/Wordpress/index.ts#L11">social/Wordpress/index.ts:11</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>ID for the module</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="url" class="tsd-anchor"></a>
+					<h3>URL</h3>
+					<div class="tsd-signature tsd-kind-icon">URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&#x60;https://www.evernote.com/clip.action?url&#x3D;${getPageURL()}&amp;title&#x3D;${getPageTitle()}&#x60;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bovidiu/js-sharing-buttons/blob/0dbc44d/src/social/Wordpress/index.ts#L7">social/Wordpress/index.ts:7</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Default URL</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="evernote" class="tsd-anchor"></a>
-					<h3>Evernote</h3>
+					<a name="wordpress" class="tsd-anchor"></a>
+					<h3>Wordpress</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">Evernote<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">Wordpress<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="_socialmedia_.html#defaultconfig" class="tsd-signature-type">defaultConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in social/WordPress/index.ts:2</li>
+									<li>Defined in <a href="https://github.com/bovidiu/js-sharing-buttons/blob/0dbc44d/src/social/Wordpress/index.ts#L19">social/Wordpress/index.ts:19</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create placeholders based on config</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>config: <a href="_socialmedia_.html#defaultconfig" class="tsd-signature-type">defaultConfig</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -125,87 +157,21 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_socialmedia_.html">"<wbr>Social<wbr>Media"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_amazon_index_.html">"social/<wbr>Amazon/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_bitly_index_.html">"social/<wbr>Bitly/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_blogger_index_.html">"social/<wbr>Blogger/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_buffer_index_.html">"social/<wbr>Buffer/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_delicious_index_.html">"social/<wbr>Delicious/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_digg_index_.html">"social/<wbr>Digg/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_email_index_.html">"social/<wbr>Email/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_evernote_index_.html">"social/<wbr>Evernote/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_facebook_index_.html">"social/<wbr>Facebook/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_gmail_index_.html">"social/GMail/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_linkedin_index_.html">"social/<wbr>Linked<wbr>In/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_pinterest_index_.html">"social/<wbr>Pinterest/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_pocket_index_.html">"social/<wbr>Pocket/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_reddit_index_.html">"social/<wbr>Reddit/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_stumbleupon_index_.html">"social/<wbr>Stumble<wbr>Upon/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_telegram_index_.html">"social/<wbr>Telegram/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_tumblr_index_.html">"social/<wbr>Tumblr/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_twitter_index_.html">"social/<wbr>Twitter/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_social_whatsapp_index_.html">"social/<wbr>Whats<wbr>App/index"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_social_wordpress_index_.html">"social/<wbr>Word<wbr>Press/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_types_defaultconfig_.html">"types/default<wbr>Config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_utils_createelement_.html">"utils/create<wbr>Element"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_utils_mergerecursive_.html">"utils/merge<wbr>Recursive"</a>
+						<a href="_social_wordpress_index_.html">"social/<wbr>Wordpress/index"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_social_wordpress_index_.html#id" class="tsd-kind-icon">ID</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_social_wordpress_index_.html#url" class="tsd-kind-icon">URL</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_social_wordpress_index_.html#evernote" class="tsd-kind-icon">Evernote</a>
+						<a href="_social_wordpress_index_.html#wordpress" class="tsd-kind-icon">Wordpress</a>
 					</li>
 				</ul>
 			</nav>

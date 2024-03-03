@@ -4,6 +4,7 @@ import socialCall from "./social/index";
  */
 let defaultConfig:defaultConfig = {
     placeholder:".socialMedia",
+    version:"[VERSION]",
     icon:{}
 };
 

@@ -1,6 +1,7 @@
 type defaultConfig ={
     placeholder:string
     icon?:defaultIcons
+    version?:string
 }
 type defaultIcons = {
     Amazon?:object | string,

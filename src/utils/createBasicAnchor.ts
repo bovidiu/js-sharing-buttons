@@ -13,8 +13,11 @@ type ICO = {
 }
 /**
  * Create document element.
- * @param type
- * @param options
+ *
+ * @param target
+ * @param getConfig
+ * @param ID
+ * @param URL
  */
 const basicAnchorShare = function (target:string, getConfig:ICO, ID:string, URL:string) {
     const parent: Element | null = document.querySelector(target);

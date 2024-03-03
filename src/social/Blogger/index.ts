@@ -1,4 +1,4 @@
-import basicAnchorShare from "../../utils/createBasicAnchro";
+import basicAnchorShare from "../../utils/createBasicAnchor";
 import getPageURL from "../../utils/pageUrl";
 
 const URL:string = `https://www.blogger.com/blog_this.pyra?t&u=${getPageURL()}`;
