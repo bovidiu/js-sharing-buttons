@@ -8,18 +8,24 @@
     "test": "tests"
   },
   "devDependencies": {
+    "@swc/jest": "^0.2.36",
+    "@types/jest": "^29.5.12",
     "codeceptjs": "^0.4.9",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-junit": "^16.0.0",
     "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
     "typedoc": "^0.5.10",
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "pretest": "tsc test/*Test.ts --module commonjs",
     "build": "webpack",
     "dev": "webpack && npx serve ./dist",
-    "documentation": "typedoc ./src --out ./docs --ignoreCompilerErrors "
+    "documentation": "typedoc ./src --out ./docs --ignoreCompilerErrors ",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",

@@ -160,3 +160,6 @@ ts/*.js
 test/DefaultConfigTest.js
 
 dist
+
+.reports
+reports

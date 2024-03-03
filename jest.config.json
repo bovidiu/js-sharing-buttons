@@ -1,0 +1,29 @@
+{
+  "automock": false,
+  "testEnvironment": "jsdom",
+  "clearMocks": true,
+  "coverageDirectory": "./reports/jest/coverage/",
+  "restoreMocks": true,
+  "globals": {
+    "window": {
+      "location": {
+        "href": ""
+      }
+    }
+  },
+  "reporters": [
+    "default",
+    [
+      "jest-junit",
+      {
+        "outputDirectory": "./reports/jest/"
+      }
+    ]
+  ],
+  "silent": true,
+  "testPathIgnorePatterns": ["./dist/", "./node_modules/"],
+  "transform": {
+    "^.+\\.tsx?$": "@swc/jest"
+  },
+  "verbose": false
+}
