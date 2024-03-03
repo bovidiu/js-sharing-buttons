@@ -1,5 +1,0 @@
-language: node_js
-node_js:
-  - "6.1"
-notifications:
-  slack: osbwebsolutions:xBLoFDJWLdNJdo76JdnO1JxP#project-tests
